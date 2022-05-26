@@ -91,6 +91,9 @@ search.addEventListener("input", function(){
         // console.log(cardTxt);
     })
 })
+search.addEventListener("mouseleave",function(){
+  document.getElementById('type').style.display = "block";
+})
 function deleteall(){
   localStorage.clear();
   showNotes();
