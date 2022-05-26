@@ -81,9 +81,12 @@ search.addEventListener("input", function(){
         console.log(cardTxt);
         if(cardTxt.includes(inputVal) || cardTitle.includes(inputVal)){
             element.style.display = "block";
+            document.getElementById('type').style.display = "none";
         }
+
         else{
             element.style.display = "none";
+            
         }
         // console.log(cardTxt);
     })
@@ -91,6 +94,5 @@ search.addEventListener("input", function(){
 function deleteall(){
   localStorage.clear();
   showNotes();
-  let i=1;
 }
 
