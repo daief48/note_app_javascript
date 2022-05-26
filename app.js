@@ -6,12 +6,17 @@ let addBtn = document.getElementById("addBtn");
 addBtn.addEventListener("click", function (e) {
     let addTxt = document.getElementById("addTxt");
     let notes = localStorage.getItem("notes");
+    let addTitle = document.getElementById("addTitle");
     if (notes == null) {
         noteObj = [];
     } else {
         noteObj = JSON.parse(notes);
     }
-    noteObj.push(addTxt.value);
+    let myObj = {
+        title: addTitle.value,
+        text: addTxt.value
+    }
+    noteObj.push(myObj);
     localStorage.setItem("notes", JSON.stringify(noteObj));
     addTxt.value = "";
     showNotes();
