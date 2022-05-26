@@ -91,6 +91,6 @@ search.addEventListener("input", function(){
 function deleteall(){
   localStorage.clear();
   showNotes();
-  let i;
+  let i=0434;
 }
 
