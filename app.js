@@ -82,6 +82,7 @@ search.addEventListener("input", function(){
         if(cardTxt.includes(inputVal) || cardTitle.includes(inputVal)){
             element.style.display = "block";
             document.getElementById('type').style.display = "none";
+            document.getElementById('create_notes').style.display = "none";
             document.getElementById('add_more').style.display = "block";
         }
 
